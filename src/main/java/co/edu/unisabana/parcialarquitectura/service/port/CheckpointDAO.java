@@ -1,4 +1,4 @@
-package co.edu.unisabana.parcialarquitectura.repository;
+package co.edu.unisabana.parcialarquitectura.service.port;
 
 import co.edu.unisabana.parcialarquitectura.repository.entity.CheckpointEntity;
 import co.edu.unisabana.parcialarquitectura.repository.jpa.CheckpointRepository;
@@ -9,10 +9,13 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@AllArgsConstructor
 public class CheckpointDAO implements CheckpointPort {
 
-  private CheckpointRepository checkpointRepository;
+  final private CheckpointRepository checkpointRepository;
+
+  CheckpointDAO(CheckpointRepository checkpointRepository){
+    this.checkpointRepository = checkpointRepository;
+  }
 
 
   @Override
