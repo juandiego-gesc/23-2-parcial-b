@@ -28,3 +28,4 @@ public class CheckpointService {
     checkpointDAO.saveCheckout(checkout);
   }
 }
+
